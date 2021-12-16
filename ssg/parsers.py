@@ -16,7 +16,7 @@ class Parser:
         self.dest = Path(dest)
         raise NotImplementedError
 
-    def read(path):
+    def read(self, path):
         with open(path) as file:
             return read(file)
 
@@ -25,7 +25,7 @@ class Parser:
         with open(full_path, "w") as file:
             file.write(content)
 
-    def copy(path, source, dest):
+    def copy(self, path, source, dest):
         shutil.copy2(path, dest / path.source)
 
     class ResourceParser:

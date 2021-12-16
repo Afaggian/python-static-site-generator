@@ -3,8 +3,7 @@ from pathlib import Path
 import shutil
 
 class Parser:
-
-    extensions = List[str]
+    extensions: List[str] = []
 
     def valid_extension(self, extension):
         if extension in self.extensions:

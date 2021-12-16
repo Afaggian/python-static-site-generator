@@ -6,8 +6,7 @@ class Parser:
     extensions: List[str] = []
 
     def valid_extension(self, extension):
-        if extension in self.extensions:
-            return(extension)
+        return extension in self.extensions:
 
     def parse(self, path, source, dest):
         self.path = Path(path)

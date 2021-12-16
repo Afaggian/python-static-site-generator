@@ -8,11 +8,8 @@ class Parser:
     def valid_extension(self, extension):
         return extension in self.extensions
 
-    def parse(self, path, source, dest):
-        self.path = Path(path)
-        self.source = Path(source)
-        self.dest = Path(dest)
-        raise NotImplementedError
+    def parse(self, path: Path, source: Path, dest: Path):
+            raise NotImplementedError
 
     def read(self, path):
         with open(path, "r") as file:

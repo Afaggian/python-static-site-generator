@@ -5,7 +5,7 @@ class Content(Mapping):
     __delimeter = "^(?:-|\+){3}\s*$"
     __regex = re.compile(__delimeter, re.MULTILINE)
 
-    @classmethod:
+    @classmethod
     def load(cls, string):
         _, fm, content = cls.__regex.split(string, 2)
         metadata = cls.load(fm, Loader=FullLoader)
@@ -15,11 +15,11 @@ class Content(Mapping):
         self.data = metadata
         self.data["content"] = content
 
-    @property:
+    @property
     def body(self):
         return self.data["content"]
 
-    @property:
+    @property
     def type(self):
         if "type" in self.data:
             return self.data["type"]
